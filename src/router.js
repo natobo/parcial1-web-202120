@@ -3,7 +3,7 @@ const express = require('express');
 const { getPairsOfPlayers } = require('./controller');
 const router = express.Router();
 
-router.get('/', async (req, resp = response, next) => {
+router.get('/pairPlayerInch/:height', async (req, resp = response, next) => {
   try {
     await getPairsOfPlayers(req, resp, next);
   } catch (error) {

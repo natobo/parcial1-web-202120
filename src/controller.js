@@ -1,6 +1,7 @@
 const { response, request } = require('express');
-const playerArray  = require('../mocks/playersArray.json').values;
+const axios = require("axios");
 
+const playerArray  = require('../mocks/playersArray.json').values;
 const getPairsOfPlayers = async (req = request, resp = response, next) => {
   //Implementar logica aquí
   const reqHeight = Number(req.params.height);
@@ -25,7 +26,6 @@ const getPairsOfPlayers = async (req = request, resp = response, next) => {
   else{
     return resp.json({ message: `There is no pair of players that match for height ${reqHeight} (in inch) ` });
   }
-  
 };
 
 module.exports = { getPairsOfPlayers };

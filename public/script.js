@@ -40,7 +40,7 @@ async function getresults(heightRef) {
   else{
     let stringHtml = "";
     let id = 1;
-    console.log(typeof(data.couples));
+    console.log(data.couple);
     Array.from(data.couples).forEach(p=>{
       stringHtml+=createRow(id,p);
       ++id;
